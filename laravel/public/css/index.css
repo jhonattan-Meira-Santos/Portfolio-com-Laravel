@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
 :root{
     --azul: #1A84E8;
-    --cinza: rgb(70, 66, 66);
+    --cinza: #c3c3c3;
     --laranja: rgb(245, 160, 50);
+    --cinza-escuro: rgb(48 47 52);
 }
 
 *{
@@ -11,7 +12,7 @@
 }
 
 body{
-    background: linear-gradient(90deg, rgb(5, 1, 75) 0%, rgba(9,9,121,1) 35%, #1A84E8 100%);
+    background: var(--cinza-escuro);
 }
 
 a{
@@ -29,6 +30,7 @@ header.cabecalho-index{
     top: 0;
     left: 0;
     width: 100%;
+    z-index: -1;
 }
 
 nav.index-nav{
@@ -68,7 +70,7 @@ li.links-li a p{
 }
 
 li.links-li a p:hover{
-    color: var(--cinza);
+    color: var(--laranja);
 }
 
 li.links-li.link-adm a p:hover{
@@ -286,40 +288,72 @@ a.card-link:hover{
     word-wrap: wrap-word;
 }
 
-/* Minha jornada */
-
-.history{
-    background-color: var(--cinza);
-    height: max-content;
+.link-projeto{
     width: 100%;
+    text-align: center;
+    background-color: var(--cinza-escuro);
+    color: #fff;
+}
+.link-projeto:hover{
+    background-color: var(--azul);
+}
+
+/* Formulário de Cadastro de Site */
+.form-section{
+    background: var(--cinza);
+}
+
+.form{
+    background-color: #fff;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding: 50px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 1px 1px 1px 1px #0000006b;
 }
 
-.content-history{
-    width: 50%;
+.form .form-group{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 5px;
+    width: 100%;
 }
 
-.history p{
-    color: #fff;
-    font-size: 23px;
-}
-
-div.content-history div p{
-    margin-top: 15px;
-}
-
-hr{
-    margin-top: 20px;
-    margin-bottom: 20px;
-
-}
-h3.dates{
-    color: var(--azul);
+.form-title{
     text-align: center;
 }
+
+.form .form-group .form-input
+{
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #aba8a8;
+}
+
+.form .form-group .form-input:focus
+{
+    outline: none;
+}
+
+.form-div-sub{
+    width: 100%;
+    text-align: center;
+}
+
+.form-submit{
+    width: 200px;
+    height: 45px;
+    border: 1px solid #000000cc;
+    background: var(--azul);
+    color: #fff;
+    font-size: 20px;
+}
+
+
 /* Icon Flutuante */
 
 .contact{
@@ -327,4 +361,13 @@ h3.dates{
     bottom: 0;
     left: 0;
     margin: 30px;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
 }

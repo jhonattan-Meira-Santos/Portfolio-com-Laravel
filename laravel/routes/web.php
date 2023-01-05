@@ -12,12 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    $nome = "Jhonattan";
-
-    return view('welcome',['nome' => $nome]);
-});
-Route::get('/index', function () {
-    return view('index');
-});
+use App\Http\Controllers\Site;
+Route::get('/',[Site::class, 'index']);
+Route::get('/index',[Site::class, 'index']);
+Route::get('/home',[Site::class, 'index']);
+Route::get('/new', [Site::class,'formulario']);

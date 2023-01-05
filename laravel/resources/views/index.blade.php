@@ -79,43 +79,41 @@
 
                 <div class="row portfolio">
                     <small id="projects">Mostrando todos os projetos. Use os filtros para listar quais tecnologias você deseja listar.</small>
-
+                    @foreach($sites as $site)
                     <div class="col-md-6 sites">
                         <a href="https://vitrinekta.com.br/version-2/app/views/site/index.php" target="_BLANK">
                             <div class="card-site">
                                 <div class="card-img">
-                                    <img src="/img/gamesFraction.jpeg">
+                                    <img src="{{$site->image}}">
                                 </div>
                                 <div class="card-descricao">
-                                    <h4 class="titulo">GamesFraction</h4>
-                                    <small>HTML5, CSS3, PHP, JavaScript, Mysql, MVC, PDO</small>
+                                    <h4 class="titulo">{{$site->name}}</h4>
+                                    <small>{{$site->tags}}</small>
                                     <p class="descricao">
-                                        Desenvolvimento Full-Stack, com o foco em qualificação de
-                                            profissionais. Desenvolvimento de Mini CRUD, Boas práticas de Códigos, POO,
-                                            entre outros recursos.
+                                        {{$site->description}}
                                     </p>
                                 </div>
 
                             </div>
-
                         </a>
-                    </div>
-                    <div class="col-md-6 sites">
-                        <a href="https://vitrinekta.com.br/version-2/app/views/site/index.php" target="_BLANK">
-                            <div class="card-site">
-                                <div class="card-img">
-                                    <img src="/img/gamesFraction.jpeg">
-                                </div>
-                                <div class="card-descricao">
-                                    <h4 class="titulo">Spotify</h4>
-                                    <small>HTML5, CSS3</small>
-                                    <p class="descricao">
-
-                                    </p>
-                                </div>
+                        <div class='row links-git-site'>
+                            <div class="col-md-6">
+                                <a href='{{$site->github}}'>
+                                    <div class="link-git">
+                                        <p class='link-projeto'>Git Hub</p>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
+                            <div class="col-md-6">
+                                <a href='{{$site->visit}}'>
+                                    <div class="link-git">
+                                        <p class='link-projeto'>Visitar</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
+                    @endforeach
                 </div>
             </div>
         </section>
