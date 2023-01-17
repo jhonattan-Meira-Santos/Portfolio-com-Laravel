@@ -17,3 +17,5 @@ Route::get('/',[Site::class, 'index']);
 Route::get('/index',[Site::class, 'index']);
 Route::get('/home',[Site::class, 'index']);
 Route::get('/new', [Site::class,'formulario']);
+Route::get('/events/create', [Site::class,'store']);
+Route::post('/events', [Site::class,'store']);

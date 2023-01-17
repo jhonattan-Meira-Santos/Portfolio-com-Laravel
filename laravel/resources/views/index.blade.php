@@ -78,13 +78,13 @@
                 <hr size="1" width="50%" noshade>
 
                 <div class="row portfolio">
-                    <small id="projects">Mostrando todos os projetos. Use os filtros para listar quais tecnologias você deseja listar.</small>
+                    <small id="projects">Mostrando todos os projetos. Use os filtros para listar quais tecnologias você deseja visualizar.</small>
                     @foreach($sites as $site)
                     <div class="col-md-6 sites">
                         <a href="https://vitrinekta.com.br/version-2/app/views/site/index.php" target="_BLANK">
                             <div class="card-site">
                                 <div class="card-img">
-                                    <img src="{{$site->image}}">
+                                    <img src="/img/events/{{ $site->image }}" alt="{{ $site->image }}">
                                 </div>
                                 <div class="card-descricao">
                                     <h4 class="titulo">{{$site->name}}</h4>
